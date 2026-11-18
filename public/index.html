@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monopoly — Dostlarla</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+<div id="home" class="screen">
+  <div class="homecard">
+    <div class="logo">MONOPOLY</div>
+    <p class="sub">Dostlarınla onlayn oyna</p>
+    <label>Adın<input id="nameIn" maxlength="16" placeholder="Məs: Tuncay" autocomplete="off"></label>
+    <button id="createBtn" class="btn primary big">Yeni otaq yarat</button>
+    <div class="or">və ya</div>
+    <div class="row">
+      <input id="codeIn" maxlength="8" placeholder="OTAQ KODU" autocomplete="off">
+      <button id="joinBtn" class="btn big">Qoşul</button>
+    </div>
+    <div class="or">və ya eyni cihazda</div>
+    <button id="localBtn" class="btn big">📱 Bu cihazda oyna</button>
+    <button id="localResume" class="btn big hidden" style="margin-top:10px">▶ Yarımçıq oyunu davam et</button>
+    <div id="homeErr" class="err"></div>
+  </div>
+</div>
+
+<div id="lobby" class="screen hidden"></div>
+
+<div id="game" class="screen hidden">
+  <aside id="left"></aside>
+  <main id="boardwrap"><div id="stage"></div></main>
+  <div id="side">
+    <div id="hud"><div class="status" id="status"></div><div id="cardbox"></div><div class="acts" id="acts"></div></div>
+    <aside id="right"></aside>
+  </div>
+  <div id="conn" class="hidden">Bağlantı kəsildi… yenidən qoşulur</div>
+</div>
+
+<div id="modal" class="overlay hidden"></div>
+<div id="auto" class="overlay hidden"></div>
+<div id="cardpop" class="hidden"></div>
+<div id="toast"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

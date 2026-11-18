@@ -1,0 +1,14 @@
+{
+  "name": "monopoly-friends",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test/sim.js"
+  },
+  "devDependencies": {
+    "three": "^0.160.0",
+    "wrangler": "^4"
+  }
+}
